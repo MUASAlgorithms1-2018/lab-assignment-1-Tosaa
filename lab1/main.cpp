@@ -285,22 +285,19 @@ bool parenthesesMatcher(char inputString[], int size) {
 }
 
 int main() {
-    Toni_Stack st;
-    std::cout << st.size() << std::endl;
-    st.push('a');
-    std::cout << st.size() << std::endl;
-    st.push('b');
-    std::cout << st.size() << std::endl;
-    st.push('c');
-    std::cout << st.size() << std::endl;
-    std::cout << "Pop " << st.pop() << " Size: " << st.size() << std::endl;
-    std::cout << "Pop " << st.pop() << " Size: " << st.size() << std::endl;
-    std::cout << "Pop " << st.pop() << " Size: " << st.size() << std::endl;
+    char test1[] = "(()()()())";
+    char test2[] = "(((())))";
+    char test3[] = "(()()(()";
+    char test4[] = "(()((())()))";
+    char test5[] = "((((((())";
+    char test6[] = "()))";
 
-    std::cout << parenthesesMatcher(new char[4]{'(','(',')',')'},4) << std::endl;
-    std::cout << parenthesesMatcher(new char[5]{'(','(','(',')',')'},5) << std::endl;
-    std::cout << parenthesesMatcher(new char[5]{')','(','(',')',')'},5) << std::endl;
-    std::cout << parenthesesMatcher(new char[4]{')','(',')',')'},4) << std::endl;
-    std::cout << parenthesesMatcher(new char[8]{'(','(','(',')',')','(',')',')'},8) << std::endl;
+    std::cout << (test1)<< " is: " << parenthesesMatcher(test1,10) << std::endl;
+    std::cout << (test2)<< " is: " << parenthesesMatcher(test2,8) << std::endl;
+    std::cout << (test3)<< " is: " << parenthesesMatcher(test3,8) << std::endl;
+    std::cout << (test4)<< " is: " << parenthesesMatcher(test4,12) << std::endl;
+    std::cout << (test5)<< " is: " << parenthesesMatcher(test5,9) << std::endl;
+    std::cout << (test6)<< " is: " << parenthesesMatcher(test6,4) << std::endl;
+
     return 0;
 }
